@@ -1,0 +1,14 @@
+@page "/addPerson"
+@rendermode InteractiveServer
+
+<h2>Add Person</h2>
+
+<form method="post">
+  <div class="input-group input-group-lg form-group">
+    <span class="input-group-text" id="inputGroup-sizing-lg">Name:</span>
+    <input asp-for="" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <input type="submit" value="submit" class="btn btn-primary mt-3"/>
+  </div>
+</form>
