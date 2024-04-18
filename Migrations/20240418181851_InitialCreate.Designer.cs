@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlazorChoresApp.Migrations
 {
     [DbContext(typeof(ChoresContext))]
-    [Migration("20240411191514_InitialCreate")]
+    [Migration("20240418181851_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
