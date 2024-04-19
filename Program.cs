@@ -38,6 +38,6 @@ app.UseAntiforgery();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
-Console.WriteLine($"Database path: {db.DbPath}");
+// Console.WriteLine($"Database path: {db.DbPath}");
 
 app.Run();

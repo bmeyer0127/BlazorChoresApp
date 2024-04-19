@@ -64,8 +64,8 @@ public class SeedDb
     {
       personList.Add(MakePerson(person));
     }
-    context.Persons.AddRange(personList);
-    // await context.SaveChangesAsync();
+    context.Persons?.AddRange(personList);
+    await context.SaveChangesAsync();
 
     // Seed Chore table
     var count = 0;
