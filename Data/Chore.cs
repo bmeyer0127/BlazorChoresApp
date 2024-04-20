@@ -1,8 +1,12 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.EntityFrameworkCore;
 
 public class Chore
 {
+  [Key]
   public int ChoreId { get; set; }
 
   [Required]
@@ -18,7 +22,8 @@ public class Chore
   public static string[] CompletionStatusOptions = { "Not Completed", "Completed" };
 
   [Required]
+  [ForeignKey("PersonId")]
   public int PersonId { get; set; }
-
+  [BindProperty]
   public Person? Person { get; set; }
 }

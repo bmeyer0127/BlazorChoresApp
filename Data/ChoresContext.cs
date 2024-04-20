@@ -13,17 +13,4 @@ public class ChoresContext : DbContext
 
   public DbSet<Chore>? Chores { get; set; }
   public DbSet<Person>? Persons { get; set; }
-
-  public string? DbPath { get; }
-
-  public ChoresContext()
-  {
-    // var folder = Environment.SpecialFolder.LocalApplicationData;
-    // var path = Environment.GetFolderPath(folder);
-    // DbPath = System.IO.Path.Join(path, "ChoresDb.db");
-    DbPath = System.IO.Path.GetFullPath("ChoresDb.db");
-  }
-
-  protected override void OnConfiguring(DbContextOptionsBuilder options)
-      => options.UseSqlite($"Data Source={DbPath}");
 }

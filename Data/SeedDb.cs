@@ -50,7 +50,7 @@ public class SeedDb
     {
       ChoreName = RandomListItem(_choreNames),
       CompletionStatus = RandomListItem(Chore.CompletionStatusOptions),
-      PersonId = Random.Shared.Next(_names.Length - 1)
+      PersonId = Random.Shared.Next(_names.Length + 1)
     };
 
     return chore;
@@ -73,7 +73,7 @@ public class SeedDb
     while (count < totalCount)
     {
       var choreList = new List<Chore>();
-      while (currentCycle <= 15 && count <= totalCount)
+      while (currentCycle++ < 15 && count++ < totalCount)
       {
         choreList.Add(MakeChore());
       }

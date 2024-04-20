@@ -4,8 +4,6 @@ using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Linq;
 
-using var db = new ChoresContext();
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
