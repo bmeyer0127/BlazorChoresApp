@@ -15,7 +15,7 @@ public static class DatabaseUtility
     if (await context.Database.EnsureCreatedAsync())
     {
       var seed = new SeedDb();
-      await seed.SeedDatabaseWithContactCountOfAsync(context, count);
+      await seed.SeedDatabase(context, count);
     }
   }
 }

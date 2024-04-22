@@ -24,6 +24,5 @@ public class Chore
   [Required]
   [ForeignKey("PersonId")]
   public int PersonId { get; set; }
-  [BindProperty]
-  public Person? Person { get; set; }
+  public virtual Person? Person { get; set; }
 }

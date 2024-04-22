@@ -56,7 +56,7 @@ public class SeedDb
     return chore;
   }
 
-  public async Task SeedDatabaseWithContactCountOfAsync(ChoresContext context, int totalCount)
+  public async Task SeedDatabase(ChoresContext context, int totalCount)
   {
     // Seed Person table
     var personList = new List<Person>();
